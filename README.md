@@ -1,119 +1,25 @@
-# Wealthwise-asset-management-system
+## **WealthWise** 🏦
 Asset Management System for Asset Management Companies
 
-Overview
+## **About Wealth Wise**
+A comprehensive asset management system designed to help asset management companies efficiently manage their assets. Includes designing and building a scalable relational database, a web-based user interface, enabling efficient tracking and management of various asset funds, maintaining detailed client profiles along with their investments, ensuring data integrity, and implementing features of user access control.
 
-WealthWise is a desktop-based asset management system designed to help Asset Management Companies (AMCs) streamline asset tracking, client investment management, and comprehensive fund profiles. Built with Python and MySQL, it provides role-based access for AMC administrators, fund managers, and clients, complete with automated database triggers and PDF-based certification extraction.
+## **Some Explicit Features!**
+✔️**Access Control**:user authentication with role-based access control, enabling differentiated user creations and permissions for customers, AMCs, and fund managers
 
-Features
+✔️**Flow management**: comprehensive fund management, client information management, and transaction tracking
 
-Authentication & Authorization:
+✔️**Certification management**:automatically extract certifacte_id, isuue_date, expiry_date from *fund manager certifications* and stores the data in database using *triggers*
 
-AMC Admin login/register
+## **Tech-Stack Used**
+- ![MySQL](https://img.icons8.com/color/48/000000/mysql.png) **MySQL Workbench**
+- ![Python](https://img.icons8.com/color/48/000000/python.png) **Python**
+- ![Tkinter](https://img.icons8.com/ios-filled/50/000000/python.png) **Tkinter**
 
-Fund Manager login
+## **How to Use?**
+1. Run queries.sql file to create all necessary db and relations.
+2. Install required libraries following the tech-stack
+3. Install the dependency :```pip install mysql-connector-python```
+4. Run ```.py``` file
 
-Customer login
 
-Asset Management: Add, view, and manage assets including shares and valuation.
-
-Bank & Account Management: Manage bank details, account balances, and transactions.
-
-Fund Management: Create and manage funds, view fund metrics (size, returns, balance).
-
-Investment & Transactions:
-
-Place buy/sell orders
-
-Track transactions with automatic logging
-
-Update fund balances via database triggers
-
-Certification Extraction: Upload certificate PDFs and automatically extract certificate details using triggers and Python's PyPDF2.
-
-Reporting: View top investors, fund performance, and custom queries.
-
-Database Automation:
-
-MySQL triggers for fund balance updates and transaction logs
-
-Stored procedures for certificate management
-
-Tech Stack
-
-Language: Python 3.x
-
-GUI: HTML,CSS,JavaScript, ReactJS
-
-Database: MySQL
-
-PDF Parsing: PyPDF2
-
-Connector: mysql-connector-python
-
-Project Structure
-
-WealthWise-DBMS-for-AMCs-main/
-├── DBMS Project Final Report - 196_200_194.pdf  # Detailed project report
-├── queries.sql                                # SQL script to create database, tables, triggers, and procedures
-├── dbms_proj.py                               # Main Python application
-├── images/                                    # Icons and screenshots
-│   ├── icon.ico
-│   ├── wealth1.png
-│   ├── wealth2.png
-│   ├── wealth3.png
-│   └── wealth4.png
-└── README.md                                  # Project documentation
-
-Setup & Installation
-
-Clone the repository
-git clone https://github.com/<your-username>/WealthWise-DBMS-for-AMCs.git
-cd WealthWise-DBMS-for-AMCs-main
-
-Database Setup
-
-Ensure MySQL server is running.
-
-Execute the SQL script to create the database, tables, triggers, and procedures:
-
-mysql -u root -p < queries.sql
-
-By default, the script creates a database named dbms.
-
-Python Dependencies
-
-Install required Python packages:
-
-pip install mysql-connector-python PyPDF2
-
-Configure Database Credentials
-
-Edit dbms_proj.py and update the MySQL connection parameters at the top of the file:
-
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="your_password",
-    database="dbms"
-)
-
-Run the Application
-
-python dbms_proj.py
-
-Usage
-
-Launch the application.
-
-Register or log in as an AMC admin.
-
-Navigate to role-specific dashboards:
-
-Fund Manager: create/manage funds and assets.
-
-Customer: place investments and view portfolio.
-
-Use the Certification Extraction feature to upload PDF certificates.
-
-View reports and perform queries via GUI.
